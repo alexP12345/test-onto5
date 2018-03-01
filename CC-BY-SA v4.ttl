@@ -1,0 +1,32 @@
+@prefix odrl:<http://www.w3.org/ns/odrl/2/> .
+@prefix : <https://dalicc.net/license-finder> .
+@prefix dalicc: <https://dalicc.poolparty.biz/DALICCVocabulary>.
+@prefix rdf:<http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix cc:<http://creativecommons.org/ns#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+
+:CC-BY-SA_4.0 a odrl:Policy;
+    odrl:permission [
+		a odrl:Permission;
+        odrl:target <http://purl.org/dc/dcmitype/Dataset>,<http://purl.org/dc/dcmitype/Sound>,<http://purl.org/dc/dcmitype/Text>,<http://purl.org/dc/dcmitype/Image>,<http://purl.org/dc/dcmitype/MovingImage>;
+        odrl:action odrl:distribute, odrl:reproduce, odrl:derive, odrl:present, odrl:extract, cc:CommercialUse, odrl:modify, odrl:translate, cc:DerivativeWorks, odrl:transform;
+       		odrl:duty [
+			a odrl:Duty;
+			odrl:action dalicc:royaltyFree, dalicc:irrevocable, dalicc:perpetual, cc:SourceCode, dalicc:worldwide, cc:attributionName, cc:Notice, dalicc:noWarrantyNotice, dalicc:modificationNotice, cc:ShareAlike;
+			]      		    
+    ];
+    
+    odrl:prohibition [
+    	a odrl:Prohibition;
+    	odrl:target <http://purl.org/dc/dcmitype/Dataset>,<http://purl.org/dc/dcmitype/Sound>,<http://purl.org/dc/dcmitype/Text>,<http://purl.org/dc/dcmitype/Image>,<http://purl.org/dc/dcmitype/MovingImage>;
+    	odrl:action odrl:ensureExclusivity, dalicc:sublicense, dalicc:charge
+    ];
+    dct:title "Attribution-ShareAlike 4.0 International"@en ;
+    dct:alternative "CC BY-SA 4.0";
+    dct:publisher "Creative Commons";
+    foaf:logo <https://licensebuttons.net/l/by-sa/4.0/88x31.png> ;
+    dct:source <https://creativecommons.org/licenses/by-sa/4.0/> ;
+    cc:legalcode """https://creativecommons.org/licenses/by-sa/4.0/legalcode"""@en.  
+    
+ 
